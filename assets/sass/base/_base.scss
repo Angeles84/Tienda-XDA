@@ -1,0 +1,12 @@
+img {
+    width: 100%;
+}
+
+
+.main_image {
+    background-image: url(../img/evan-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    object-fit: contain;
+}

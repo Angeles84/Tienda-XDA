@@ -1,0 +1,85 @@
+.navigation {
+    position: relative;
+  }
+  
+  .navigation__logo {
+    position: absolute;  
+    padding-left: 1em;
+    padding-right: 1.2em;
+    background-color: $smoky-black;
+    color: $white;
+    h5 {
+        margin-top: 1.1em;
+        margin-bottom: .6em;
+    }
+    
+  }
+  
+  .collapsible {
+    text-align: right;
+    label {
+        display: block;
+        padding-top: 1.2em;
+        padding-bottom: .4em;
+        padding-right: 1em;
+        font-size: 1.8rem;
+    }
+  }
+  
+  #menu {
+    display: none;
+  }
+  
+  input:checked~.navigation__container {
+    max-height: 100%;
+  }
+  
+  .navigation__container {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navigation__list {
+    list-style-type: none;
+  }
+  
+  .navigation__item {
+    a {
+        display: block;
+        text-align: left;
+        padding: .5em;
+        font-family: $raleway;
+        font-size: $x-large;
+        font-weight: $bold;
+        text-decoration: none;
+        color: $smoky-black;
+        &:hover {
+            color: $granite-gray;
+        }
+    }
+  }
+  
+  @media only screen and (min-width: 720px) {
+    .collapsible {
+        label {
+            display: none;
+        }
+    }
+    .navigation__container {
+        max-height: 100%;
+        padding: .75em 3em .6em 3em;
+        overflow: visible;
+    }
+    .navigation__list {
+        display: flex;
+        justify-content: flex-end;
+        padding: inherit;
+        margin: inherit;
+    }
+    .navigation__item {
+        a {
+            padding: .5em 1em;
+        }
+    }
+  }
